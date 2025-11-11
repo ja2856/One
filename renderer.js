@@ -62,7 +62,7 @@ function formatTime(seconds) {
 // Update display
 function updateDisplay() {
   timeDisplay.textContent = formatTime(timeLeft);
-  sessionInfo.textContent = `Session ${currentSession} of 4`;
+  sessionInfo.textContent = `Session ${currentSession} of 8`;
 }
 
 // Update body class for visual state
@@ -139,8 +139,8 @@ function onTimerComplete() {
     sessionCount++;
     currentSession++;
 
-    if (sessionCount % 4 === 0) {
-      // Long break after 4 work sessions
+    if (sessionCount % 8 === 0) {
+      // Long break after 8 work sessions
       showNotification('Work Complete!', 'Time for a long break!');
       if (settings.autoStartBreaks) {
         setMode('long-break');
